@@ -20,32 +20,32 @@ import gym
 import gym.spaces
 
 try:
-    from gym_robotics.envs.fetch import push
-
-    if not hasattr(push, 'FetchPushEnv'):
-        push.FetchPushEnv = push.MujocoPyFetchPushEnv
-
     from gym_robotics.envs.fetch import reach
 
     if not hasattr(reach, 'FetchReachEnv'):
         reach.FetchReachEnv = reach.MujocoPyFetchReachEnv
 
-    from gym_robotics.envs.fetch import slide
+    from gym_robotics.envs.fetch import push
 
-    if not hasattr(slide, 'FetchSlideEnv'):
-        slide.FetchSlideEnv = slide.MujocoPyFetchSlideEnv
+    if not hasattr(push, 'FetchPushEnv'):
+        push.FetchPushEnv = push.MujocoPyFetchPushEnv
 
     from gym_robotics.envs.fetch import pick_and_place
 
     if not hasattr(pick_and_place, 'FetchPickAndPlaceEnv'):
         pick_and_place.FetchPickAndPlaceEnv = pick_and_place.MujocoFetchPickAndPlaceEnv
 
+    from gym_robotics.envs.fetch import slide
+
+    if not hasattr(slide, 'FetchSlideEnv'):
+        slide.FetchSlideEnv = slide.MujocoPyFetchSlideEnv
+
 
 except ImportError:
-    from gym.envs.robotics.fetch import push
     from gym.envs.robotics.fetch import reach
-    from gym.envs.robotics.fetch import slide
+    from gym.envs.robotics.fetch import push
     from gym.envs.robotics.fetch import pick_and_place
+    from gym.envs.robotics.fetch import slide
 import numpy as np
 
 

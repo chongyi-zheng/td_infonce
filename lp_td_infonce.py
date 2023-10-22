@@ -52,11 +52,11 @@ logger.addFilter(CheckTypesFilter())
 FLAGS = flags.FLAGS
 flags.DEFINE_boolean('debug', False, 'Runs training for just a few steps.')
 flags.DEFINE_bool('run_tf_eagerly', False, 'Enables / disables eager execution of tf.functions.')
-flags.DEFINE_string('exp_log_dir', os.path.join(os.path.realpath(__file__), 'td_infonce_logs'),
+flags.DEFINE_string('exp_log_dir', os.path.join(os.path.dirname(os.path.realpath(__file__)), 'td_infonce_logs'),
                     'Root directory for writing logs/summaries/checkpoints.')
 flags.DEFINE_bool('exp_log_dir_add_uid', False,
                   'Enables / disables unique id for the log directory')
-flags.DEFINE_string('env_name', 'sawyer_window',
+flags.DEFINE_string('env_name', 'fetch_reach',
                     'Select an environment')
 # fetch_reach / fetch_reach_image and offline antmaze tasks: max_number_of_steps = 500_000
 # other fetch tasks: max_number_of_steps = 1_000_000
@@ -181,7 +181,6 @@ def main(_):
             'batch_size': 32,
             'max_number_of_steps': 20_000,
             'hidden_layer_sizes': (32, 32, 32, 32),
-            'bc_early_stopping_steps': 2_000,
             'twin_q': True,
         })
 

@@ -40,8 +40,10 @@ gym-notices==0.0.7
 h5py==3.7.0
 imageio==2.19.3
 importlib-metadata==4.11.4
+-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 jax==0.3.13
-jaxlib==0.3.10
+-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+jaxlib==0.3.10+cuda11.cudnn82
 jmp==0.0.2
 joblib==1.1.0
 keras==2.8.0
@@ -60,7 +62,8 @@ mkl-service==2.4.0
 mock==4.0.3
 msgpack==1.0.4
 mujoco==2.2.0
-mujoco-py==2.0.2.7
+mujoco-py==2.0.2.5
+lockfile==0.12.2
 numpy==1.22.4
 opt-einsum==3.3.0
 optax==0.1.2

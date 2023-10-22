@@ -104,10 +104,7 @@ class TDInfoNCELearner(acme.Learner):
                 target_q_params, next_obs, next_action, goal, rand_g)
 
             logits_w = jnp.min(logits_w, axis=-1)
-            if config.use_arbitrary_func_reg:
-                w = jnp.exp(logits_w) / batch_size
-            else:
-                w = jax.nn.softmax(logits_w, axis=1)
+            w = jax.nn.softmax(logits_w, axis=1)
 
             # Note that we remove the multiplier N for w to balance
             # one term of loss1 with N terms of loss2 in each row.
@@ -182,11 +179,8 @@ class TDInfoNCELearner(acme.Learner):
                     q_params, new_obs, action, new_goal, new_goal)
 
                 logits = jnp.min(logits, axis=-1)
-                if config.use_arbitrary_func_reg:
-                    actor_q_loss = -jnp.diag(logits)
-                else:
-                    I = jnp.eye(batch_size)
-                    actor_q_loss = optax.softmax_cross_entropy(logits=logits, labels=I)
+                I = jnp.eye(batch_size)
+                actor_q_loss = optax.softmax_cross_entropy(logits=logits, labels=I)
                 actor_loss = actor_q_loss
 
                 assert 0.0 <= config.bc_coef <= 1.0

@@ -1,5 +1,5 @@
 # [Contrastive Difference Predictive Coding]()
-<p align="center"><img src="td_infonce.png" width=90%></p>
+<p align="center"><img src="td_infonce.png" width=80%></p>
 
 <p align="center"> Chongyi Zheng, &nbsp; Ruslan Salakhutdinov, &nbsp; Benjamin Eysenbach</p>
 <p align="center">
@@ -10,40 +10,20 @@
 
 This repository contains code for running TD InfoNCE algorithm.
 
-[//]: # (```)
-
-[//]: # (@misc{zheng2023stabilizing,)
-
-[//]: # (      title={Stabilizing Contrastive RL: Techniques for Offline Goal Reaching}, )
-
-[//]: # (      author={Chongyi Zheng and Benjamin Eysenbach and Homer Walke and Patrick Yin and Kuan Fang and Ruslan Salakhutdinov and Sergey Levine},)
-
-[//]: # (      year={2023},)
-
-[//]: # (      eprint={2306.03346},)
-
-[//]: # (      archivePrefix={arXiv},)
-
-[//]: # (      primaryClass={cs.LG})
-
-[//]: # (})
-
-[//]: # (```)
-
 ## Installation
 
 1. Create an Anaconda environment: `conda create -n td_infonce python=3.9 -y`
 2. Activate the environment: `conda activate td_infonce`
-3. Install the dependencies: `pip install -r requirements.txt --no-deps`
-4. Install jax with CUDA manually:
+3. Install the dependencies:
 ```
-TODO
+conda install -c conda-forge cudatoolkit=11.3.1 cudatoolkit-dev=11.3.1 cudnn=8.2 -y
+pip install -r requirements.txt --no-deps
 ```
 5. Export environment variables
 ```
 export TF_FORCE_GPU_ALLOW_GROWTH=true
 export XLA_PYTHON_CLIENT_PREALLOCATE=false
-export PATH=$CONDA_PREFIX/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib
 ```
 
 
