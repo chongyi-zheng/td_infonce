@@ -1,5 +1,5 @@
 # [Contrastive Difference Predictive Coding]()
-<p align="center"><img src="td_infonce.gif" width=80%></p>
+<p align="center"><img src="td_infonce.png" width=80%></p>
 
 <p align="center"> Chongyi Zheng, &nbsp; Ruslan Salakhutdinov, &nbsp; Benjamin Eysenbach</p>
 <p align="center">
