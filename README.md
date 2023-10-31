@@ -64,7 +64,7 @@ python lp_td_infonce.py
 --exp_log_dir=LOG_DIR
 ```
 
-## Acknowledgement
+## Acknowledgment
 
 The TD InfoNCE implementation was adapted from [contrastive RL](https://github.com/google-research/google-research/blob/master/contrastive_rl).
 
