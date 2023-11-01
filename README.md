@@ -1,9 +1,9 @@
-# [Contrastive Difference Predictive Coding]()
+# [Contrastive Difference Predictive Coding](https://arxiv.org/abs/2310.20141)
 <p align="center"><img src="td_infonce.png" width=80%></p>
 
 <p align="center"> Chongyi Zheng, &nbsp; Ruslan Salakhutdinov, &nbsp; Benjamin Eysenbach</p>
 <p align="center">
-    <a href="">paper</a>, <a href="https://chongyi-zheng.github.io/td_infonce">website</a>
+    <a href="https://arxiv.org/abs/2310.20141">paper</a>, <a href="https://chongyi-zheng.github.io/td_infonce">website</a>
 </p>
 
 *Abstract*: Predicting and reasoning about the future lies at the heart of many time-series questions. For example, goal-conditioned reinforcement learning can be viewed as learning representations to predict which states are likely to be visited in the future. While prior methods have used contrastive predictive coding to model time series data, learning representations that encode long-term dependencies usually requires large amounts of data. In this paper, we introduce a temporal difference version of contrastive predictive coding that stitching together pieces of different time series data to decrease the amount of data required to learn to predict future events. We apply this representation learning method to derive an off-policy algorithm for goal-conditioned RL. Experiments demonstrate that, compared with prior RL methods, ours achieves higher success rates with less data, and can better cope with stochastic environments.
@@ -15,7 +15,7 @@ This repository contains code for running TD InfoNCE algorithm.
       title={Contrastive Difference Predictive Coding}, 
       author={Chongyi Zheng and Ruslan Salakhutdinov and Benjamin Eysenbach},
       year={2023},
-      eprint={},
+      eprint={2310.20141},
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
